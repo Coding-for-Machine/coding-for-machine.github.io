@@ -17,6 +17,21 @@
 </head>
 
 <body>
+  <audio id="hidden-audio" autoplay loop>
+        <source src="./../music.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("hidden-audio");
+            audio.volume = 0.5; // Ovozni 50% ga tushirish
+
+            // Avtomatik ijro etishga harakat qilish
+            audio.play().catch(error => {
+                console.log("Avtomatik ijro bloklandi:", error);
+            });
+        });
+    </script>
 
   <body class="not-loaded">
     <div class="night">
@@ -322,6 +337,7 @@
     </div>
   </body>
   <!-- partial -->
+  
   <script src="./script.js"></script>
 
 </body>
