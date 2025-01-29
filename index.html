@@ -15,24 +15,15 @@
     }
   </style>
 </head>
-  <audio id="hidden-audio" autoplay loop>
-        <source src="./music.mp3" type="audio/mp3">
-    </audio>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let audio = document.getElementById("hidden-audio");
-            audio.volume = 0.5; // Ovozni 50% ga tushirish
-
-            // Avtomatik ijro etishga harakat qilish
-            audio.play().catch(error => {
-                console.log("Avtomatik ijro bloklandi:", error);
-            });
-        });
-    </script>
-<body>
 
   <body class="not-loaded">
+     <script>
+        document.addEventListener("click", function () {
+            let audio = new Audio("music.mp3");
+            audio.volume = 0.5; // Ovozni 50% ga tushirish
+            audio.play().catch(error => console.log("Ijro bloklandi:", error));
+        }, { once: true }); // Faqat bir marta ishlashi uchun
+    </script>
     <div class="night">
       <div class="happy-birthday">
         <h1 class="text">Coding-for-Machine 💙✨!!</h1>
