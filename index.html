@@ -9,71 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            position: relative;
-            width: 80%;
-            max-width: 900px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-        .slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .item {
-            min-width: 100%;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .content {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .des {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .button {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .button button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        .button button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+       
     </style>
 </head>
 <body>
@@ -83,56 +19,46 @@
             <div class="content">
               <div class="name">Turkish</div>
               <div class="des">Ramazan Bayramınız Müabarek Olsun!</div>
+              
             </div>
           </div>
           <div class="item" style="background-image: url(https://i.hizliresim.com/1zdjkbg.png);">
             <div class="content">
               <div class="name">English</div>
               <div class="des">Eid Mubarak!</div>
+             
             </div>
           </div>
           <div class="item" style="background-image: url(https://i.hizliresim.com/c8nvefl.png);">
             <div class="content">
               <div class="name">French</div>
               <div class="des">Aid Moubarak!</div>
+              
             </div>
           </div>
           <div class="item" style="background-image: url(https://i.hizliresim.com/512z8tw.png);">
             <div class="content">
               <div class="name">Spanish</div>
               <div class="des">Feliz Eid!</div>
+             
             </div>
           </div>
           <div class="item" style="background-image: url(https://i.hizliresim.com/j2u80ov.png);">
             <div class="content">
               <div class="name">Bosnian</div>
               <div class="des">Bajram Serif Mubarek Olsun!</div>
+              
             </div>
           </div>
         </div>
+      
         <div class="button">
           <button class="prev"><i class="fas fa-arrow-left"></i></button>
           <button class="next"><i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelector('.slide');
-        const totalSlides = document.querySelectorAll('.item').length;
-        
-        document.querySelector('.next').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlide();
-        });
-        
-        document.querySelector('.prev').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateSlide();
-        });
-        
-        function updateSlide() {
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    </script>
+    
+    <script src="script.js"></script>
+    
 </body>
 </html>
